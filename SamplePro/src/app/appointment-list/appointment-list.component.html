@@ -1,28 +1,28 @@
 <div class="container">
-    <div class="card mt-3">
+    <div class="card mt-3 bg-light">
         <div class="row">
-            <div class="col">
-                <h2 class="text-center">Create new appointment</h2>
+            <div class="col"> 
+                <h3 class="text-center">Create new appointment</h3>
             </div>
         </div>
-        <div class="row">
+        <div class="row m-3">
             <div class="col-md-6">
-                <input class="form-control" appTextonly [(ngModel)]="newAppointmentTitle" type="text" placeholder="Appointment description">
+                <input class="form-control" appTextonly [(ngModel)]="newAppointmentTitle" type="text" placeholder="Appointment description" >
             </div>
             <div class="col-md-4">
-                <input class="form-control" [(ngModel)]="newAppointmentDate" type="date" placeholder="Appointment Date" [value]="newAppointmentDate | customDate">
+                <input class="form-control" [(ngModel)]="newAppointmentDate" type="date" placeholder="Appointment Date">
             </div>
             <div class="col-md-2">
                 <button class="btn btn-primary w-100" (click)="addAppointment()">Add</button>
             </div>
-        </div>
+        </div> 
     </div>
 
- <h2 class="text-center mt-5">Appointments</h2>
+ <h3 class="text-center mt-5 bg-light rounded">Appointments</h3>
 
- <ul class="list-group mt-3">
-    <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let appointment of appointments; index as i">
-     {{appointment.title}} {{appointment.date | date:'dd.MM.yyyy'}}
+ <ul class="list-group mt-3 mb-3"> 
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-light" *ngFor="let appointment of appointments; index as i">
+     {{appointment.title}} {{appointment.date}}
     <button class="btn btn-danger" (click)="deleteAppointment(i)">Delete</button>
     </li>
 </ul>

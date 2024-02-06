@@ -15,7 +15,7 @@ export class AppointmentListComponent implements OnInit{
   }
 
   newAppointmentTitle:string = "";
-  newAppointmentDate:Date = new Date();
+  newAppointmentDate: string = new Date().toISOString(); // Convert Date to string using ISO format
 
   appointments: Appointment[] = [];
 
@@ -31,7 +31,7 @@ export class AppointmentListComponent implements OnInit{
       this.appointments.push(newAppointment)
 
       this.newAppointmentTitle = "" ;
-      this.newAppointmentDate = new Date();
+      this.newAppointmentDate = new Date().toISOString();
 
       console.log(newAppointment)
 
