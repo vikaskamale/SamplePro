@@ -21,6 +21,6 @@ describe('ReversePipe',()=>{
   it('should handle an empty string',()=> {
     const inputString = '';
     const reverseString = pipe.transform(inputString);
-    expect(reverseString).toEqual('321$@!');
+    expect(reverseString).toEqual('');
   })
 })
