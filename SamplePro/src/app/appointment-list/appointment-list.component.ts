@@ -7,9 +7,8 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./appointment-list.component.css']
 })
 export class AppointmentListComponent implements OnInit{
-  
+
   ngOnInit(): void {
-   console.log("got loaded");
   let savedAppointments = localStorage.getItem("appointments")
   this.appointments = savedAppointments ? JSON.parse(savedAppointments) : []
   }
@@ -32,8 +31,6 @@ export class AppointmentListComponent implements OnInit{
 
       this.newAppointmentTitle = "" ;
       this.newAppointmentDate = new Date().toISOString();
-
-      console.log(newAppointment)
 
       localStorage.setItem("appointments", JSON.stringify(this.appointments))
     }

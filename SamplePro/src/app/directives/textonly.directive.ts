@@ -7,7 +7,7 @@ export class TextonlyDirective {
 
   constructor(private el: ElementRef){}
 
-  @HostListener('input',['$event']) onInput(event: Event): void{
+  @HostListener('input',['$event']) onInput(): void{
     const inputElement = this.el.nativeElement as HTMLInputElement;
     const currentValue = inputElement.value;
 
